@@ -1,0 +1,10 @@
+C:\Users\USER\source\repos\Fnaf\Fnaf\bin\Debug\Fnaf.exe.config
+C:\Users\USER\source\repos\Fnaf\Fnaf\bin\Debug\Fnaf.exe
+C:\Users\USER\source\repos\Fnaf\Fnaf\bin\Debug\Fnaf.pdb
+C:\Users\USER\source\repos\Fnaf\Fnaf\obj\Debug\Fnaf.csprojAssemblyReference.cache
+C:\Users\USER\source\repos\Fnaf\Fnaf\obj\Debug\Fnaf.Properties.Resources.resources
+C:\Users\USER\source\repos\Fnaf\Fnaf\obj\Debug\Fnaf.csproj.GenerateResource.cache
+C:\Users\USER\source\repos\Fnaf\Fnaf\obj\Debug\Fnaf.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\Fnaf\Fnaf\obj\Debug\Fnaf.exe
+C:\Users\USER\source\repos\Fnaf\Fnaf\obj\Debug\Fnaf.pdb
+C:\Users\USER\source\repos\Fnaf\Fnaf\obj\Debug\Fnaf.Gimp.resources
