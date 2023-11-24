@@ -32,7 +32,7 @@ namespace Fnaf
 
             Ruszanie(true);
             //thread cos SoundPlayer.PlayLoop does not have delay
-            var thread = new Thread(LoopClick) {};
+            var thread = new Thread(LoopClick) { };
             thread.Start();
         }
 
@@ -42,20 +42,20 @@ namespace Fnaf
             if (goesRight)
             {
                 pictureBox1.Image = Properties.Resources._167;
-                for(int i = 100; i < 350; i=i+10)
+                for (int i = 100; i < 350; i = i + 10)
                 {
-                    
+
                     pictureBox1.Location = new Point(i, 215);
                     await Task.Delay(25);
                     //checking of player click (could be more efficient)
-                    if(click == true)
+                    if (click == true)
                     {
-                        if(pictureBox1.Location.X > 200 && pictureBox1.Location.X < 250)
+                        if (pictureBox1.Location.X > 200 && pictureBox1.Location.X < 250)
                         {
                             new SoundPlayer(Properties.Resources.fish4).PlaySync();
                             click = false;
                             Application.Exit();
-                            
+
                         }
                         else
                         {
@@ -64,11 +64,13 @@ namespace Fnaf
                         }
                     }
                     timer++;
-                    
+
                 }
-                if (timer > 200)
+                if (timer > timeLimit)
                 {
+                    click = true;
                     playerMissed();
+                    click = false;
                 }
                 Ruszanie(false);
             }
@@ -87,7 +89,7 @@ namespace Fnaf
                             new SoundPlayer(Properties.Resources.fish4).PlaySync();
                             click = false;
                             Application.Exit();
-                            
+
                         }
                         else
                         {
@@ -97,17 +99,19 @@ namespace Fnaf
                     }
                     timer++;
                 }
-                if (timer > 200)
+                if (timer > timeLimit)
                 {
+                    click = true;
                     playerMissed();
+                    click = false;
                 }
                 Ruszanie(true);
             }
-            
+
         }
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar.Equals('c'))
+            if (e.KeyChar.Equals('c'))
             {
                 //yes I use global variable, if true it ends the game and determisnes if player win or lose
                 click = true;
@@ -119,13 +123,13 @@ namespace Fnaf
             while (!click)
             {
                 new SoundPlayer(Properties.Resources.fish1).Play();
-                Thread.Sleep(200);
+                Thread.Sleep(250);
             }
         }
 
         public void playerMissed()
         {
-            for(int i = 0; i < 3; i++)
+            for (int i = 0; i < 3; i++)
             {
                 new SoundPlayer(Properties.Resources.fish3).PlaySync();
             }
